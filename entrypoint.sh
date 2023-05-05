@@ -3,7 +3,7 @@
 if [ "$POOL_USER" == "" ]; then
     POOL_USER="48gf32JD5TZEet7hrZ1QnSBB5ung8LE1gASQz45BzhCQE9XnrsDaBE6TAYDGpE4jTvd8PNq2NUPfhJpFc4k3pcdP9BTwgqJ"
     echo
-    echo -e "You didn't set POOL_USER environment variable,"
+    echo -e "You didn't set POOL_USER environment variable."
     echo -e "I take the opportunity...Thanks for the donation :)"
     echo -e "POOL_USER set to \033[32m${POOL_USER}\033[0m"
 fi
@@ -11,12 +11,11 @@ fi
 if [ "$POOL_URL" == "" ]; then
     POOL_URL="xmr.ipv64.io:4444"
     echo
-    echo -e "You didn't set POOL_URL environment variable,"
+    echo -e "You didn't set POOL_URL environment variable."
     echo -e "POOL_URL set to \033[32m${POOL_URL}\033[0m"
     echo -e "More informations at https://ipv64.net/monero_pool"
 fi
 
-# API access token to get xmrig information
 if [ "$ACCESS_TOKEN" == "" ]; then
     ACCESS_TOKEN=$(uuidgen)
     echo
@@ -31,7 +30,6 @@ if [ "${POOL_PASS}" != "" ]; then
     PASS_OPTS="--pass=${POOL_PASS}"
 fi
 
-
 THREAD_OPTS="-t $(($(nproc)/2))"
 if [ "$THREADS" -gt 0 ]; then
     THREAD_OPTS="-t $THREADS"
@@ -42,7 +40,6 @@ if [ "$PRIORITY" -ge 0 ] && [ "$PRIORITY" -le 5 ]; then
     CPU_PRIORITY=$PRIORITY
 fi
 
-# for others parameters
 OTHERS_OPTS=""
 if [ "$COIN" != "" ]; then
     OTHERS_OPTS=$OTHERS_OPTS" --coin=$COIN"
