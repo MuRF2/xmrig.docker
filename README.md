@@ -20,7 +20,7 @@ docker run --name miner --rm -it \
     -e POOL_USER=$POOL_USER \
     -e POOL_PASS=$POOL_PASS \
     -e DONATE_LEVEL=$DONATE_LEVEL \ 
-    murf2/xmrig.docker:latest
+    ghcr.io/murf2/xmrig.docker:latest
 ```
 
 ### docker-compose.yml
