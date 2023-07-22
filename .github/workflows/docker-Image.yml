@@ -2,8 +2,8 @@ name: Build and push
 on: 
   push:
   pull_request:
-  schedule:
-    - cron: '0 0 1 * *'  # At 12:00am on the 1st
+  #schedule:
+  #  - cron: '0 0 1 * *'  # At 12:00am on the 1st
     
 env:
   REGISTRY: ghcr.io

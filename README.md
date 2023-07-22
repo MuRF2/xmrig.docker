@@ -1,6 +1,4 @@
-# xmrig.docker - Monero miner for x86/ARM hosts
-
-Docker image is generated via GitHub action, which includes the most up-to-date version of xmrig.
+# xmrig.docker - Monero miner in docker for x86/ARM hosts
 
 ```bash
 docker pull ghcr.io/murf2/xmrig.docker:latest
